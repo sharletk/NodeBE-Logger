@@ -1,0 +1,16 @@
+{
+  "name": "nodebe-logger",
+  "version": "0.1.0",
+  "description": "NodeBE-Logger, extended version of built-in console with additional features and e.hancements written for NodeBE(MC:BE Server Software) in node.js.",
+  "main": "./src/NodeBELogger.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodebe",
+    "logger",
+    "nodejs"
+  ],
+  "author": "SharletP",
+  "license": "GPL-3.0-or-later"
+}
