@@ -25,7 +25,7 @@ class NodeBELogger extends Console {
     if(typeof data === "string") {
       return data;
     } else if(Array.isArray(data)) {
-      return data.map(Logger.parseData).join("\n");
+      return data.map(NodeBELogger.parseData).join("\n");
     } else if(typeof data === "object" && data !== null) {
       return util.inspect(data, {
         depth: 0,
@@ -40,7 +40,7 @@ class NodeBELogger extends Console {
   }
   
   _writeLog(data, dataType = "LOG") {
-    data = Logger.parseData(data);
+    data = NodeBELogger.parseData(data);
     dataType = dataType.toUpperCase();
     
     const format = config.GLOBAL["format"];
