@@ -1,45 +1,33 @@
 const config = {
-  GLOBAL: {
-    format: (str) => `\x1B[1m${str}\x1B[0m`,
+  /* #IMPORTANT NOTE#
+  
+  * DONT MESS WITH IT IF YOU DONT KNOW HOW TO!
+  
+  Make sure to set in the following values when writing the config's format (head & body) with the following data...
+   DONT MISS ANY DETAILS!!!
+   
+   ~head
+    - dataType
+    - timeStamp
+    - colors
     
-    time: (str) => `\x1B[90m${str}\x1B[0m`,
+   ~body
+    - data
+    - color   
     
-    INFO: {
-      message: (str) => `\x1B[97m${str}\x1B[0m`
-    },
-    
-    NOTICE: {
-      message: (str) => `\x1B[96m${str}\x1B[0m`
-    },
-        
-    LOG: {
-      message: (str) => `\x1B[92m${str}\x1B[0m`
-    },
-    
-    ALERT: {
-      message: (str) => `\x1B[91m${str}\x1B[0m`
-    },
-      
-    WARNING: {
-      message: (str) => `\x1B[93m${str}\x1B[0m`
-    },
-      
-    ERROR: {
-      message: (str) => `\x1B[31m${str}\x1B[0m`
+ **EXAMPLE**
+  "format": {
+    colors: {
+      dataTypeColor: "BOLD_BRIGHT",
+      timeStampColor: "FG_DARK_GRAY"
     },
     
-    EMERGENCY: {
-      message: (str) => `\x1B[35m${str}\x1B[0m`
-    },
+    head: (dataType, timeStamp, dataTypeColor, timeStampColor, resetColor) => `${dataTypeColor}[ ${dataType} ] ${resetColor}${timeStampColor}( ${timeStamp} ) ${resetColor}\n`,
     
-    CRITICAL: {
-      message: (str) => `\x1B[95m${str}\x1B[0m`
-    },
-      
-    DEBUG: {
-      message: (str) => `\x1B[90m${str}\x1B[0m`
-    }
+    body: (data, baseColor, resetColor) => `>>> ${baseColor} ${data} ${resetColor}`
   }
+  
+  */
 };
 
 module.exports = config;
