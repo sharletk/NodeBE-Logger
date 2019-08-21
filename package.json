@@ -1,6 +1,6 @@
 {
   "name": "nodebe-logger",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "NodeBE-Logger, extended version of built-in console with additional features and enhancements written for NodeBE(MC:BE Server Software) in node.js.",
   "main": "./src/NodeBELogger.js",
   "scripts": {
